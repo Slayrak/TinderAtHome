@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Backend.DAL.Models;
-internal class AppUser
+﻿namespace Backend.DAL.Models;
+public class AppUser
 {
+    public Guid Id { get; set; } = Guid.NewGuid();
+    public required string DisplayName { get; set; }
+    public required string Email { get; set; }
 }
