@@ -2,13 +2,10 @@
 using Backend.DAL.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
 
 namespace Backend.Controllers;
 
-[Route("api/[controller]")]
-[ApiController]
-public class MembersController(AppDataContext context) : ControllerBase
+public class MembersController(AppDataContext context) : BaseApiController
 {
     [HttpGet]
     public async Task<ActionResult<IReadOnlyCollection<AppUser>>> GetUsers()
